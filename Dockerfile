@@ -4,6 +4,8 @@ FROM node:lts-alpine
 
 LABEL maintainer="Jonathan Gao <gsmlg.com@gmail.com>"
 
+LABEL org.opencontainers.image.source="https://github.com/gsmlg-ci/semantic-release"
+
 RUN apk add --no-cache git curl jq bash \
   && npm install --location=global semantic-release \
     @semantic-release/changelog \
